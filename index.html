@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nicolai Blix</title>
+  <link rel="icon" type="image/png" href="FAVICON_32X32-03-01.png" />
   <style>
     * {
       margin: 0;
@@ -17,37 +18,33 @@
       font-family: 'Helvetica Neue', sans-serif;
       height: 100vh;
       width: 100vw;
+      padding: 63px;
       position: relative;
     }
 
     .corner {
       position: absolute;
       font-size: 1rem;
-      max-width: calc(100% - 126px);
     }
 
     .top-left {
-      top: 63px;
-      left: 63px;
+      top: 0;
+      left: 0;
     }
 
     .top-right {
-      top: 63px;
-      right: 63px;
+      top: 0;
+      right: 0;
     }
 
     .bottom-left {
-      bottom: 63px;
-      left: 63px;
+      bottom: 0;
+      left: 0;
     }
 
     .bottom-right {
-      bottom: 63px;
-      right: 63px;
-      display: flex;
-      align-items: flex-end;
-      flex-direction: row;
-      gap: 0.5rem;
+      bottom: 0;
+      right: 0;
       text-align: right;
     }
 
@@ -55,8 +52,8 @@
       writing-mode: vertical-rl;
       transform: rotate(180deg);
       transform-origin: bottom right;
-      white-space: nowrap;
       line-height: 1;
+      margin-top: -2px; /* justerer tetthet */
     }
   </style>
 </head>
