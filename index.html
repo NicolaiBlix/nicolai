@@ -22,37 +22,41 @@
 
     .corner {
       position: absolute;
-      padding: 1rem;
       font-size: 1rem;
+      max-width: calc(100% - 126px); /* 63px * 2 */
     }
 
     .top-left {
-      top: 0;
-      left: 0;
+      top: 63px;
+      left: 63px;
     }
 
     .top-right {
-      top: 0;
-      right: 0;
+      top: 63px;
+      right: 63px;
     }
 
     .bottom-left {
-      bottom: 0;
-      left: 0;
+      bottom: 63px;
+      left: 63px;
     }
 
     .bottom-right {
-      bottom: 0;
-      right: 0;
+      bottom: 63px;
+      right: 63px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 0.25rem;
       text-align: right;
     }
 
     .vertical {
-      display: inline-block;
-      transform: rotate(180deg);
       writing-mode: vertical-rl;
-      transform-origin: bottom right;
-      margin-left: 0.25rem;
+      transform: rotate(180deg);
+      transform-origin: bottom;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -62,11 +66,9 @@
   <div class="corner top-right">design,</div>
   <div class="corner bottom-left">and facilitation.</div>
   <div class="corner bottom-right">
-    This is my little <span class="vertical">corner of the internet.</span>
+    <div>This is my little</div>
+    <div class="vertical">corner of the internet.</div>
   </div>
 
 </body>
 </html>
-
-
-
