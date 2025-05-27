@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,35 +8,62 @@
   <style>
     body {
       margin: 0;
-      background-color: #000;
-      color: #fff;
+      background: black;
+      color: white;
       font-family: 'Helvetica Neue', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
-      text-align: center;
+      overflow: hidden;
     }
 
-    .center {
-      max-width: 700px;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 1.3rem;
-      line-height: 1.6;
+    .corner {
+      position: absolute;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+
+    .top-left {
+      top: 0;
+      left: 0;
+    }
+
+    .top-right {
+      top: 0;
+      right: 0;
+    }
+
+    .bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+
+    .vertical {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: rotate(90deg) translate(50%, 100%);
+      transform-origin: right top;
+      white-space: nowrap;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
-      .center {
-        font-size: 1rem;
-        line-height: 1.4;
+      .corner, .vertical {
+        font-size: 0.85rem;
+        padding: 0.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="center">
-    I work with insight, design, and facilitation.<br />
-    This is my little corner of the internet.
-  </div>
+  <div class="corner top-left">I work with insight,</div>
+  <div class="corner top-right">design,</div>
+  <div class="corner bottom-left">and facilitation.</div>
+  <div class="corner bottom-right">This is my little</div>
+  <div class="vertical">corner of the internet.</div>
 </body>
 </html>
