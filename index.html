@@ -23,7 +23,7 @@
     .corner {
       position: absolute;
       font-size: 1rem;
-      max-width: calc(100% - 126px); /* 63px * 2 */
+      max-width: calc(100% - 126px);
     }
 
     .top-left {
@@ -45,18 +45,18 @@
       bottom: 63px;
       right: 63px;
       display: flex;
-      flex-direction: row;
       align-items: flex-end;
-      justify-content: flex-end;
-      gap: 0.25rem;
+      flex-direction: row;
+      gap: 0.5rem;
       text-align: right;
     }
 
-    .vertical {
+    .bottom-right .vertical {
       writing-mode: vertical-rl;
       transform: rotate(180deg);
-      transform-origin: bottom;
+      transform-origin: bottom right;
       white-space: nowrap;
+      line-height: 1;
     }
   </style>
 </head>
