@@ -2,68 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nicolai Blix</title>
-  <link rel="icon" href="FAVICON_32X32-03-02-01.png" type="image/png">
   <style>
     body {
       margin: 0;
-      background: black;
-      color: white;
+      background-color: #000;
+      color: #fff;
       font-family: 'Helvetica Neue', sans-serif;
       height: 100vh;
+      width: 100vw;
       overflow: hidden;
+      position: relative;
     }
 
-    .corner {
+    .corner-tl {
       position: absolute;
-      font-size: 1rem;
+      top: 0;
+      left: 0;
       padding: 1rem;
+      font-size: 1rem;
     }
 
-    .top-left {
-      top: 0;
-      left: 0;
-    }
-
-    .top-right {
+    .corner-tr {
+      position: absolute;
       top: 0;
       right: 0;
+      padding: 1rem;
+      font-size: 1rem;
     }
 
-    .bottom-left {
+    .corner-bl {
+      position: absolute;
       bottom: 0;
       left: 0;
+      padding: 1rem;
+      font-size: 1rem;
     }
 
-    .bottom-right {
+    .corner-br {
+      position: absolute;
       bottom: 0;
       right: 0;
+      padding: 1rem;
+      text-align: right;
+      font-size: 1rem;
     }
 
     .vertical {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: rotate(90deg) translate(50%, 100%);
-      transform-origin: right top;
-      white-space: nowrap;
+      transform: rotate(180deg) translateY(100%);
+      transform-origin: bottom right;
+      display: inline-block;
       font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      .corner, .vertical {
-        font-size: 0.85rem;
-        padding: 0.5rem;
-      }
+      padding-right: 0.5rem;
     }
   </style>
 </head>
 <body>
-  <div class="corner top-left">I work with insight,</div>
-  <div class="corner top-right">design,</div>
-  <div class="corner bottom-left">and facilitation.</div>
-  <div class="corner bottom-right">This is my little</div>
-  <div class="vertical">corner of the internet.</div>
-</body>
-</html>
+
+  <div class="corner-tl">I work with insight,</div>
+  <div class="corner-tr">design,</div>
+  <div class="corner-bl">and facilitation.</div>
+
